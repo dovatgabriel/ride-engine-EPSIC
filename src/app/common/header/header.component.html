@@ -1,0 +1,14 @@
+<header class="header">
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <input
+    matInput
+    placeholder="Rechercher..."
+    (keydown)="handleKeydown($event)"
+    (input)="handleInput($event)"
+  />
+  <button mat-icon-button (click)="search()">
+    <mat-icon>search</mat-icon>
+  </button>
+</header>

@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 8px 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 40%;
+  margin: 10px auto;
+  border-radius: 30px;
+  gap: 20px;
+
+  input {
+    border: none;
+    font-size: 1.1rem;
+    flex: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:has(input:focus) {
+    outline: solid 3px #454ade20;
+  }
+}
