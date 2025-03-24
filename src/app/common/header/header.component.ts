@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {MatIcon} from '@angular/material/icon';
-import {MatFormField, MatInput} from '@angular/material/input';
-import {MatIconButton} from '@angular/material/button';
-import {FormsModule} from '@angular/forms';
-import {MatMenu, MatMenuTrigger} from '@angular/material/menu';
-import {MatOption} from '@angular/material/select';
-import {MatSlider, MatSliderThumb} from '@angular/material/slider';
+import { MatIcon } from '@angular/material/icon';
+import { MatFormField, MatInput } from '@angular/material/input';
+import { MatIconButton } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
+import { MatOption } from '@angular/material/select';
+import { MatSlider, MatSliderThumb } from '@angular/material/slider';
 
 @Component({
   selector: 'app-header',
@@ -24,12 +24,10 @@ import {MatSlider, MatSliderThumb} from '@angular/material/slider';
     MatSliderThumb,
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  searchValue: string = '';
-
-  constructor() {}
+  searchValue = '';
 
   handleKeydown(event: KeyboardEvent): void {
     if (event.key === 'Enter') {
