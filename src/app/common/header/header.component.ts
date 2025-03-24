@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatIcon} from '@angular/material/icon';
-import {MatInput} from '@angular/material/input';
-import {NgOptimizedImage} from '@angular/common';
-import {MatButton, MatIconButton} from '@angular/material/button';
+import {MatFormField, MatInput} from '@angular/material/input';
+import {MatIconButton} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
+import {MatMenu, MatMenuTrigger} from '@angular/material/menu';
+import {MatOption} from '@angular/material/select';
+import {MatSlider, MatSliderThumb} from '@angular/material/slider';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,14 @@ import {FormsModule} from '@angular/forms';
     MatInput,
     MatIconButton,
     FormsModule,
+    MatMenuTrigger,
+    MatMenu,
+    MatFormField,
+    MatFormField,
+    MatOption,
+    MatFormField,
+    MatSlider,
+    MatSliderThumb,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -33,6 +42,8 @@ export class HeaderComponent {
   }
 
   search(): void {
-    alert(this.searchValue);
+    if (this.searchValue) {
+      console.log(`Searching for ${this.searchValue}`);
+    }
   }
 }
