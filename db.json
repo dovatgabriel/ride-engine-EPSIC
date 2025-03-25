@@ -1,3 +1,164 @@
 {
-  "rides": []
+  "rides": [
+    {
+      "id": 1,
+      "title": "Tour du lac de Joux",
+      "difficulty": 5,
+      "description": "Magnifique tour du lac de Joux, avec une vue imprenable sur les montagnes environnantes.",
+      "location": {
+        "city": "Le Pont",
+        "npa": 1342,
+        "addressName": "Place du Pont",
+        "addressNumber": 3
+      },
+      "images": [
+        "https://example.com/lac-de-joux1.jpg",
+        "https://example.com/lac-de-joux2.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Balade des vignobles de Lavaux",
+      "difficulty": 4,
+      "description": "Promenade paisible au cœur des vignobles de Lavaux, classés au patrimoine mondial de l'UNESCO.",
+      "location": {
+        "city": "Cully",
+        "npa": 1096,
+        "addressName": "Rue du Bourg",
+        "addressNumber": 10
+      },
+      "images": [
+        "https://example.com/lavaux1.jpg",
+        "https://example.com/lavaux2.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Sentier du Mont-Pèlerin",
+      "difficulty": 6,
+      "description": "Montée à travers forêt et prairies avec panorama sur le lac Léman depuis le sommet.",
+      "location": {
+        "city": "Chardonne",
+        "npa": 1803,
+        "addressName": "Chemin du Funiculaire",
+        "addressNumber": 2
+      },
+      "images": [
+        "https://example.com/mont-pelerin1.jpg",
+        "https://example.com/mont-pelerin2.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Tour de la Venoge",
+      "difficulty": 3,
+      "description": "Balade le long de la rivière Venoge, idéale pour les familles et les amoureux de la nature.",
+      "location": {
+        "city": "Echandens",
+        "npa": 1026,
+        "addressName": "Chemin de la Venoge",
+        "addressNumber": 12
+      },
+      "images": [
+        "https://example.com/venoge1.jpg",
+        "https://example.com/venoge2.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Balade des Pléiades",
+      "difficulty": 7,
+      "description": "Randonnée alpine jusqu’aux Pléiades, avec vue panoramique sur les Alpes et le lac Léman.",
+      "location": {
+        "city": "Blonay",
+        "npa": 1807,
+        "addressName": "Route des Pléiades",
+        "addressNumber": 25
+      },
+      "images": [
+        "https://example.com/pleiades1.jpg",
+        "https://example.com/pleiades2.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Forêt de Sauvabelin",
+      "difficulty": 2,
+      "description": "Petite promenade en pleine forêt urbaine avec tour panoramique en bois.",
+      "location": {
+        "city": "Lausanne",
+        "npa": 1018,
+        "addressName": "Route du Signal",
+        "addressNumber": 21
+      },
+      "images": [
+        "https://example.com/sauvabelin1.jpg",
+        "https://example.com/sauvabelin2.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Crêt de la Neuve",
+      "difficulty": 6,
+      "description": "Randonnée sur les crêtes avec vue sur le Jura et les Alpes, très apprécié des randonneurs.",
+      "location": {
+        "city": "Bière",
+        "npa": 1145,
+        "addressName": "Route de Marchissy",
+        "addressNumber": 8
+      },
+      "images": [
+        "https://example.com/cret1.jpg",
+        "https://example.com/cret2.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Tour de Saint-Cergue",
+      "difficulty": 5,
+      "description": "Balade variée autour de Saint-Cergue, entre forêts, pâturages et vues sur les Alpes.",
+      "location": {
+        "city": "Saint-Cergue",
+        "npa": 1264,
+        "addressName": "Rue de la Gare",
+        "addressNumber": 1
+      },
+      "images": [
+        "https://example.com/stcergue1.jpg",
+        "https://example.com/stcergue2.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Sentier des Toblerones",
+      "difficulty": 4,
+      "description": "Chemin historique suivant les fortifications anti-chars de la Seconde Guerre mondiale.",
+      "location": {
+        "city": "Bassins",
+        "npa": 1269,
+        "addressName": "Route de Gland",
+        "addressNumber": 16
+      },
+      "images": [
+        "https://example.com/toblerones1.jpg",
+        "https://example.com/toblerones2.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Panorama sur le Moléson depuis les Préalpes vaudoises",
+      "difficulty": 8,
+      "description": "Parcours exigeant menant à un point de vue spectaculaire sur le Moléson et les montagnes environnantes.",
+      "location": {
+        "city": "Les Diablerets",
+        "npa": 1865,
+        "addressName": "Route du Pillon",
+        "addressNumber": 33
+      },
+      "images": [
+        "https://example.com/diablerets1.jpg",
+        "https://example.com/diablerets2.jpg"
+      ]
+    }
+  ]
 }
