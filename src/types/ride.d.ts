@@ -32,6 +32,14 @@ export interface Ride {
    * @example ["https://example.com/image1.jpg", "https://example.com/image2.jpg"]
    */
   images: string[];
+  /**
+   * The banner image URL of the ride.
+   */
+  banner: string;
+  /**
+   * The length of the ride in kilometers.
+   */
+  length: number;
 }
 
 export interface RideLocation {
