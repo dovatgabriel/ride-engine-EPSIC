@@ -1,4 +1,10 @@
 <div class="ride">
   <h2 class="ride__title">{{ ride?.title }}</h2>
   <p class="ride__description">{{ ride?.description }}</p>
+  <div class="ride__stats">
+    <span class="ride__stats__difficulty" [style]="{ color: (ride?.difficulty ?? 0 | difficultyColor) }">
+      Difficulté :{{' '}}
+      {{ ride?.difficulty }}
+    </span>
+  </div>
 </div>

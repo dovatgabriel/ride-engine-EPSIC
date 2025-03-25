@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Ride } from '../../../types/ride';
+import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
 
 @Component({
   selector: 'app-ride',
-  imports: [],
+  imports: [DifficultyColorPipe],
   templateUrl: './ride.component.html',
   styleUrl: './ride.component.scss',
 })
