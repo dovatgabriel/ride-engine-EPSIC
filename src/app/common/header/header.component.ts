@@ -29,16 +29,6 @@ import { MatSlider, MatSliderThumb } from '@angular/material/slider';
 export class HeaderComponent {
   searchValue = '';
 
-  handleKeydown(event: KeyboardEvent): void {
-    if (event.key === 'Enter') {
-      this.search();
-    }
-  }
-
-  handleInput(event: Event): void {
-    this.searchValue = (event.target as HTMLInputElement).value;
-  }
-
   search(): void {
     if (this.searchValue) {
       console.log(`Searching for ${this.searchValue}`);
