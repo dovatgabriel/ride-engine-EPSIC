@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatFormField, MatInput } from '@angular/material/input';
 import { MatIconButton } from '@angular/material/button';
@@ -27,11 +27,5 @@ import { MatSlider, MatSliderThumb } from '@angular/material/slider';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  searchValue = '';
-
-  search(): void {
-    if (this.searchValue) {
-      console.log(`Searching for ${this.searchValue}`);
-    }
-  }
+  @Output() searchValue = new EventEmitter<string>();
 }

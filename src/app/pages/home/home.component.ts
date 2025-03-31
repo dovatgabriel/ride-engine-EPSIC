@@ -8,4 +8,6 @@ import { ListComponent } from '../../common/list/list.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  searchBarValue = '';
+}

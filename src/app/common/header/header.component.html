@@ -2,12 +2,8 @@
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
-  <input
-    matInput
-    placeholder="Rechercher..."
-    (input)="search()"
-  />
-  <button mat-icon-button (click)="search()">
+  <input matInput placeholder="Rechercher..."[(ngModel)]="searchValue" />
+  <button mat-icon-butto>
     <mat-icon>search</mat-icon>
   </button>
 </header>
