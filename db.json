@@ -1,3 +1,194 @@
 {
-  "rides": []
+  "rides": [
+    {
+      "id": 1,
+      "title": "Tour du lac de Joux",
+      "difficulty": 5,
+      "description": "Magnifique tour du lac de Joux, avec une vue imprenable sur les montagnes environnantes.",
+      "location": {
+        "city": "Le Pont",
+        "npa": 1342,
+        "addressName": "Place du Pont",
+        "addressNumber": 3
+      },
+      "banner": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Lac_de_Joux_et_lac_Brenet.png",
+      "length": 11.3,
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a3/Lac_de_Joux_et_lac_Brenet.png",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/74/fe/c7/vallee-de-joux-tourisme.jpg?w=1200&h=-1&s=1",
+        "https://static.mycity.travel/manage/uploads/6/26/48526/1cbbe773fa4d7b3f9daf42ae89e31903b4748031_800.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Balade des vignobles de Lavaux",
+      "difficulty": 4,
+      "description": "Promenade paisible au cœur des vignobles de Lavaux, classés au patrimoine mondial de l'UNESCO.",
+      "location": {
+        "city": "Cully",
+        "npa": 1096,
+        "addressName": "Rue du Bourg",
+        "addressNumber": 10
+      },
+      "length": 6.8,
+      "banner": "https://static.mycity.travel/manage/uploads/6/13/61183/2/lavaux_2000.jpg",
+      "images": [
+        "https://static.mycity.travel/manage/uploads/6/13/61183/2/lavaux_2000.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWM485WvphSvrfx8VODyKMNABpR4OLI73c2Q&s",
+        "https://www.novo-monde.com/app/uploads/2017/12/DSC02325.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Sentier du Mont-Pèlerin",
+      "difficulty": 6,
+      "description": "Montée à travers forêt et prairies avec panorama sur le lac Léman depuis le sommet.",
+      "location": {
+        "city": "Chardonne",
+        "npa": 1803,
+        "addressName": "Chemin du Funiculaire",
+        "addressNumber": 2
+      },
+      "length": 9.1,
+      "banner": "https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNzU2MzgzMjIvOGQ4MTcwNTU2YmYwM2I1ODljYTE3ZTlhYWNhOTdlZjcuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=90",
+      "images": [
+        "https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNzI5OTk0NjcvMTU0YjYxZTAyODgzNTgyNWMyMDlhOTY0ZjU1Mjk4ZTYuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=90",
+        "https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvODUzNzMyNzYvZWE3OTZmODJhY2YzM2VlMDZmNGU3MDViMWNlN2VmMTQuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=90",
+        "https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNzU2MzgzMjIvOGQ4MTcwNTU2YmYwM2I1ODljYTE3ZTlhYWNhOTdlZjcuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=90"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Tour de la Venoge",
+      "difficulty": 3,
+      "description": "Balade le long de la rivière Venoge, idéale pour les familles et les amoureux de la nature.",
+      "location": {
+        "city": "Echandens",
+        "npa": 1026,
+        "addressName": "Chemin de la Venoge",
+        "addressNumber": 12
+      },
+      "length": 7.2,
+      "banner": "https://static.mycity.travel/manage/uploads/6/51/207236/1/balade-le-long-de-la-venoge-2020-cmrt-1_2000.JPEG",
+      "images": [
+        "https://cdn.unitycms.io/images/AVpXgOuHaR493QcDRJErpd.jpg?op=ocroped&val=1200,630,1000,1000,0,0&sum=-_xu23eejuw",
+        "https://static.mycity.travel/manage/uploads/6/51/207236/1/balade-le-long-de-la-venoge-2020-cmrt-1_2000.JPEG",
+        "https://cdn.unitycms.io/images/EhemsPASKZ79RolgO5Gk6L.jpg?op=ocroped&val=1200,630,1000,1000,0,0&sum=whFp-QcQbJI"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Balade des Pléiades",
+      "difficulty": 7,
+      "description": "Randonnée alpine jusqu’aux Pléiades, avec vue panoramique sur les Alpes et le lac Léman.",
+      "location": {
+        "city": "Blonay",
+        "npa": 1807,
+        "addressName": "Route des Pléiades",
+        "addressNumber": 25
+      },
+      "length": 10.5,
+      "banner": "https://cdn.loisirs.ch/media/cache/default_og_image/default/0001/65/64663_default_og_image.jpg",
+      "images": [
+        "https://cdn.loisirs.ch/media/cache/default_og_image/default/0001/65/64663_default_og_image.jpg",
+        "https://randofacile.ch/wp-content/uploads/2023/05/SON07483-1024x683.jpg",
+        "https://cdn.loisirs.ch/media/cache/default_og_image/default/0001/70/69081_default_og_image.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Forêt de Sauvabelin",
+      "difficulty": 2,
+      "description": "Petite promenade en pleine forêt urbaine avec tour panoramique en bois.",
+      "location": {
+        "city": "Lausanne",
+        "npa": 1018,
+        "addressName": "Route du Signal",
+        "addressNumber": 21
+      },
+      "length": 3.2,
+      "banner": "https://www.lausanne.ch/.imaging/mte/lausanne/original/website/lausanne/vie-pratique/nature/patrimoine-arbore/forets/foret-de-sauvabelin/contentAutogenerated/autogeneratedContainer/col1/0/import/sauvabelin-reamenagement-0820.2019-10-28-17-01-32.jpg",
+      "images": [
+        "https://static.lausanne-tourisme.ch/image/upload/f_auto,w_2500/setn3lrwgceptkyhj9dr",
+        "https://cdn.loisirs.ch/media/cache/default_og_image/default/0001/14/13725_default_og_image.jpg",
+        "https://www.lausanne.ch/.imaging/mte/lausanne/original/website/lausanne/vie-pratique/nature/patrimoine-arbore/forets/foret-de-sauvabelin/contentAutogenerated/autogeneratedContainer/col1/0/import/sauvabelin-reamenagement-0820.2019-10-28-17-01-32.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Crêt de la Neuve",
+      "difficulty": 6,
+      "description": "Randonnée sur les crêtes avec vue sur le Jura et les Alpes, très apprécié des randonneurs.",
+      "location": {
+        "city": "Bière",
+        "npa": 1145,
+        "addressName": "Route de Marchissy",
+        "addressNumber": 8
+      },
+      "length": 8.7,
+      "banner": "https://img.altituderando.com/1200x/e4/c5/doc757416.jpg",
+      "images": [
+        "https://img.altituderando.com/1200x/e4/c5/doc757416.jpg",
+        "https://images.hika.app/hikes/images/original/switzerland/vaud/cret-de-la-neuve.jpeg?fit=crop&fm=jpg&h=630&w=1200",
+        "https://www.visinand.ch/Sommets/Cret_de_la_Neuve/2022_06/2022_06%20Cret%20de%20la%20Neuve_097.JPG"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Tour de Saint-Cergue",
+      "difficulty": 5,
+      "description": "Balade variée autour de Saint-Cergue, entre forêts, pâturages et vues sur les Alpes.",
+      "location": {
+        "city": "Saint-Cergue",
+        "npa": 1264,
+        "addressName": "Rue de la Gare",
+        "addressNumber": 1
+      },
+      "length": 9.8,
+      "banner": "https://static.mycity.travel/manage/uploads/6/25/16782/dfebd9fd155e138c9f2e8bb457b83d6163406f9c_1080.JPG",
+      "images": [
+        "https://static.mycity.travel/manage/uploads/6/25/16782/dfebd9fd155e138c9f2e8bb457b83d6163406f9c_1080.JPG",
+        "https://angebote.paerke.ch/uploads/0c/0c7a200667344154400c39770cf315b9.jpg",
+        "https://static.mycity.travel/manage/uploads/6/25/99522/2/nyon-givrine-rando-parc-jura-vaudois_2000.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Sentier des Toblerones",
+      "difficulty": 4,
+      "description": "Chemin historique suivant les fortifications anti-chars de la Seconde Guerre mondiale.",
+      "location": {
+        "city": "Bassins",
+        "npa": 1269,
+        "addressName": "Route de Gland",
+        "addressNumber": 16
+      },
+      "length": 6.5,
+      "banner": "https://static.mycity.travel/manage/uploads/6/25/11522/d6b7eaa31b033a1ba03004bd4e11dd6156ef449e_2000.JPG",
+      "images": [
+        "https://static.mycity.travel/manage/uploads/6/25/11522/d6b7eaa31b033a1ba03004bd4e11dd6156ef449e_2000.JPG",
+        "https://www.visinand.ch/Sentiers/Toblerones/2013_05/2013_05%20Sentier%20des%20Toblerones_0571.JPG",
+        "https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMzI1NTM5NjIvYjRlNWFiOTIzNmMyZjA3ZDQwOWRjMjE1NzYyOTYxMWIuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=75"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Panorama sur le Moléson depuis les Préalpes vaudoises",
+      "difficulty": 8,
+      "description": "Parcours exigeant menant à un point de vue spectaculaire sur le Moléson et les montagnes environnantes.",
+      "location": {
+        "city": "Les Diablerets",
+        "npa": 1865,
+        "addressName": "Route du Pillon",
+        "addressNumber": 33
+      },
+      "length": 14.6,
+      "banner": "https://www.week-end-famille.ch/wp-content/uploads/moleson_telepherique-scaled.jpg",
+      "images": [
+        "https://www.week-end-famille.ch/wp-content/uploads/moleson_telepherique-scaled.jpg",
+        "https://fribourg.ch/wp-content/uploads/2021/11/gruyere-116884-web-automne-moleson-atjan-geerk-suisse-tourisme-11_3000.jpg",
+        "https://images.hika.app/hikes/images/original/switzerland/fribourg-freiburg/tour-de-plan-francey.jpeg?auto=format&fit=crop"
+      ]
+    }
+  ]
 }
