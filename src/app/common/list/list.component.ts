@@ -20,6 +20,7 @@ import { NgForOf } from '@angular/common';
 export class ListComponent implements OnInit, OnChanges {
   @Input() searchQuery = '';
   rides: Ride[] = [];
+  allRides: Ride[] = [];
 
   constructor(private readonly ridesService: RidesService) {}
 
@@ -29,13 +30,24 @@ export class ListComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['searchQuery']) {
-      this.getRides();
+      this.filterRides();
     }
   }
 
   getRides(): void {
-    this.ridesService.getRides(this.searchQuery).subscribe((rides) => {
-      this.rides = rides;
+    this.ridesService.getRides().subscribe((rides) => {
+      this.allRides = rides;
+      this.filterRides();
     });
+  }
+
+  filterRides(): void {
+    if (this.searchQuery) {
+      this.rides = this.allRides.filter((ride) =>
+        ride.title.toLowerCase().startsWith(this.searchQuery.toLowerCase()),
+      );
+    } else {
+      this.rides = [...this.allRides];
+    }
   }
 }
