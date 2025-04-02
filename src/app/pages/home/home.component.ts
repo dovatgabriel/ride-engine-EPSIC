@@ -4,15 +4,15 @@ import { ListComponent } from '../../common/list/list.component';
 
 @Component({
   selector: 'app-home',
+  standalone: true,  // Si tu utilises des composants standalone
   imports: [HeaderComponent, ListComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
   searchBarValue: string = '';
 
   onSearchValueReceived(searchValue: string) {
     this.searchBarValue = searchValue;
-    console.log('Recherche captée dans HomeComponent:', this.searchBarValue);
   }
 }

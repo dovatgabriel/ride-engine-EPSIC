@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Ride } from '../../../types/ride';
 import { RidesService } from '../../services/rides.service';
 import { RideComponent } from '../ride/ride.component';
@@ -6,17 +6,29 @@ import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-list',
+  standalone: true,  // Si tu utilises des composants standalone
   imports: [RideComponent, NgForOf],
   templateUrl: './list.component.html',
-  styleUrl: './list.component.scss',
+  styleUrls: ['./list.component.scss'],
 })
-export class ListComponent implements OnInit {
+export class ListComponent implements OnInit, OnChanges {
+  @Input() searchQuery: string = '';  // Valeur de recherche
   rides: Ride[] = [];
 
   constructor(private readonly ridesService: RidesService) {}
 
   ngOnInit(): void {
-    this.ridesService.getRides().subscribe((rides) => {
+    this.getRides();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['searchQuery']) {
+      this.getRides();
+    }
+  }
+
+  getRides(): void {
+    this.ridesService.getRides(this.searchQuery).subscribe((rides) => {
       this.rides = rides;
     });
   }
