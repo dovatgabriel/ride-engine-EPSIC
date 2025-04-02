@@ -9,5 +9,10 @@ import { ListComponent } from '../../common/list/list.component';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  searchBarValue = '';
+  searchBarValue: string = '';
+
+  onSearchValueReceived(searchValue: string) {
+    this.searchBarValue = searchValue;
+    console.log('Recherche captée dans HomeComponent:', this.searchBarValue);
+  }
 }
