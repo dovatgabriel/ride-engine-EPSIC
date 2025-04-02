@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { MatFormField, MatInput } from '@angular/material/input';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
 import { MatIconButton } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
@@ -9,6 +10,8 @@ import { MatSlider, MatSliderThumb } from '@angular/material/slider';
 
 @Component({
   selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
   imports: [
     MatIcon,
     MatInput,
@@ -17,31 +20,16 @@ import { MatSlider, MatSliderThumb } from '@angular/material/slider';
     MatMenuTrigger,
     MatMenu,
     MatFormField,
-    MatFormField,
     MatOption,
-    MatFormField,
     MatSlider,
     MatSliderThumb,
   ],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  @Output() searchValueChange = new EventEmitter<string>();
   searchValue = '';
 
-  handleKeydown(event: KeyboardEvent): void {
-    if (event.key === 'Enter') {
-      this.search();
-    }
-  }
-
-  handleInput(event: Event): void {
-    this.searchValue = (event.target as HTMLInputElement).value;
-  }
-
-  search(): void {
-    if (this.searchValue) {
-      console.log(`Searching for ${this.searchValue}`);
-    }
+  onSearchInput() {
+    this.searchValueChange.emit(this.searchValue);
   }
 }
