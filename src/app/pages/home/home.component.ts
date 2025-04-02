@@ -4,7 +4,7 @@ import { ListComponent } from '../../common/list/list.component';
 
 @Component({
   selector: 'app-home',
-  standalone: true, // Si tu utilises des composants standalone
+  standalone: true,
   imports: [HeaderComponent, ListComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
