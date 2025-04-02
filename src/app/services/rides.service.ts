@@ -12,16 +12,16 @@ export class RidesService {
 
   constructor(private http: HttpClient) {}
 
-  getRides(searchQuery: string = ''): Observable<Ride[]> {
+  getRides(searchQuery = ''): Observable<Ride[]> {
     return this.http.get<Ride[]>(`${this.jsonServerUrl}/rides`).pipe(
       map((rides) => {
         if (searchQuery) {
-          return rides.filter(ride =>
-            ride.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+          return rides.filter((ride) =>
+            ride.title.toLowerCase().startsWith(searchQuery.toLowerCase()),
           );
         }
         return rides;
-      })
+      }),
     );
   }
 }

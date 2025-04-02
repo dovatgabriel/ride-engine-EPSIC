@@ -1,4 +1,10 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { Ride } from '../../../types/ride';
 import { RidesService } from '../../services/rides.service';
 import { RideComponent } from '../ride/ride.component';
@@ -6,13 +12,13 @@ import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-list',
-  standalone: true,  // Si tu utilises des composants standalone
+  standalone: true,
   imports: [RideComponent, NgForOf],
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit, OnChanges {
-  @Input() searchQuery: string = '';  // Valeur de recherche
+  @Input() searchQuery = '';
   rides: Ride[] = [];
 
   constructor(private readonly ridesService: RidesService) {}

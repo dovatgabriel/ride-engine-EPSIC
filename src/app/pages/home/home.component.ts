@@ -4,13 +4,13 @@ import { ListComponent } from '../../common/list/list.component';
 
 @Component({
   selector: 'app-home',
-  standalone: true,  // Si tu utilises des composants standalone
+  standalone: true, // Si tu utilises des composants standalone
   imports: [HeaderComponent, ListComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  searchBarValue: string = '';
+  searchBarValue = '';
 
   onSearchValueReceived(searchValue: string) {
     this.searchBarValue = searchValue;

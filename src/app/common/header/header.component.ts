@@ -27,7 +27,7 @@ import { MatSlider, MatSliderThumb } from '@angular/material/slider';
 })
 export class HeaderComponent {
   @Output() searchValueChange = new EventEmitter<string>();
-  searchValue: string = '';
+  searchValue = '';
 
   onSearchInput() {
     this.searchValueChange.emit(this.searchValue);
