@@ -15,7 +15,7 @@ export class HomeComponent {
 
   onDistanceValueReceived(distanceValue: number){
     this.distanceBarValue = distanceValue;
-    console.log(this.distanceBarValue);
+
   }
 
   onSearchValueReceived(searchValue: string) {
