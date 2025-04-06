@@ -1,25 +1,20 @@
 <header class="header">
-  <img src="icon.png" alt="Logo" class="logo"/>
+  <img src="icon.png" alt="Logo" class="logo" />
 
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
-  <input matInput placeholder="Rechercher..."[(ngModel)]="searchValue" (input)="onSearchInput()"/>
-  <button mat-icon-butto>
+  <input matInput placeholder="Rechercher..." [(ngModel)]="searchValue" (input)="onSearchInput()" />
+  <button mat-icon-button>
     <mat-icon>search</mat-icon>
   </button>
 </header>
 
-<mat-menu
-  #menu="matMenu"
-  class="filters-menu"
-  style="background-color: #ffffff !important; padding: 16px; min-width: 300px"
->
-  <div style="min-height: 250px; width: 500px; padding: 0 20px">
+<mat-menu #menu="matMenu" class="filters-menu" [hasBackdrop]="false"
+  style="background-color: #ffffff !important; padding: 16px; min-width: 300px">
+  <div style="min-height: 250px; width: 500px; padding: 0 20px" (click)="$event.stopPropagation()">
     <h2 style="font-size: 1.2rem; font-weight: 500">Filtres</h2>
     <h3>Distance en kilomètres</h3>
-    <mat-slider min="1" max="10" step="0.5">
-      <input matSliderThumb value="1.5" />
-    </mat-slider>
+    <input matInput type="number" placeholder="Distance" [(ngModel)]="searchDistance" (input)="onDistanceInput()" />
   </div>
 </mat-menu>
