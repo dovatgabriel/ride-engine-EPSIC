@@ -30,12 +30,10 @@ export class HeaderComponent {
   @Output() distanceValueChange = new EventEmitter<number>();
   searchValue = '';
   searchDistance = 0;
-  
 
-  onDistanceInput(){
+  onDistanceInput() {
     this.distanceValueChange.emit(this.searchDistance);
   }
-
 
   onSearchInput() {
     this.searchValueChange.emit(this.searchValue);

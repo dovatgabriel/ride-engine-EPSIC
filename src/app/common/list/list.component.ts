@@ -49,9 +49,8 @@ export class ListComponent implements OnInit, OnChanges {
         ? ride.title.toLowerCase().startsWith(this.searchQuery.toLowerCase())
         : true;
 
-      const matchesDistance = this.distanceQuery > 0
-        ? ride.length <= this.distanceQuery
-        : true;
+      const matchesDistance =
+        this.distanceQuery > 0 ? ride.length <= this.distanceQuery : true;
 
       return matchesQuery && matchesDistance;
     });
