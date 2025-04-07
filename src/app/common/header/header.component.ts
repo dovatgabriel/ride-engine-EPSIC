@@ -39,12 +39,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.ridesService.getLongestRide().subscribe((value) => {
       this.longestRide = value;
-      console.log('Longest ride:', this.longestRide);
+      this.searchDistance = value;
     });
   
     this.ridesService.getShortestRide().subscribe((value) => {
       this.shortestRide = value;
-      console.log('Shortest ride:', this.shortestRide);
     });
   }  
 
