@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Ride } from '../../../types/ride';
 import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
@@ -6,7 +7,10 @@ import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
 @Component({
   selector: 'app-ride',
   standalone: true,
-  imports: [DifficultyColorPipe],
+  imports: [
+    CommonModule,
+    DifficultyColorPipe
+  ],
   templateUrl: './ride.component.html',
   styleUrl: './ride.component.scss',
 })
@@ -15,8 +19,12 @@ export class RideComponent {
 
   constructor(private router: Router) {}
 
+  get backgroundImage(): string {
+    return this.ride?.banner ? `url(${this.ride.banner})` : 'none';
+  }
+
   goToDetail(): void {
-    if (this.ride) {
+    if (this.ride?.id) {
       this.router.navigate(['/rides', this.ride.id]);
     }
   }

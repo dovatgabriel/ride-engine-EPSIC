@@ -1,11 +1,12 @@
-<div class="ride"
-     tabindex="0"
-     role="button"
-     (click)="goToDetail()"
-     (keydown.enter)="goToDetail()"
-     (keydown.space)="goToDetail()"
-     [style]="{ 'background-image': 'url(' + ride?.banner + ')' }"
-     style="cursor: pointer;">
+<div
+  class="ride"
+  tabindex="0"
+  role="button"
+  (click)="goToDetail()"
+  (keydown.enter)="goToDetail()"
+  (keydown.space)="goToDetail()"
+  [ngStyle]="{ 'background-image': backgroundImage }"
+>
   <div class="ride__title">
     <h2>{{ ride?.title }}</h2>
     <span class="ride__title__length">
