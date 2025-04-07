@@ -13,6 +13,7 @@ export class HomeComponent {
   searchBarValue = '';
   distanceBarValue = 0;
   cityBarValue = '';
+  timeBarValue = 0;
 
   onDistanceValueReceived(distanceValue: number) {
     this.distanceBarValue = distanceValue;
@@ -23,5 +24,9 @@ export class HomeComponent {
   }
   onSearchValueReceived(searchValue: string) {
     this.searchBarValue = searchValue;
+  }
+
+  onTimeValueReceived(timeValue: number){
+    this.timeBarValue = timeValue;
   }
 }

@@ -17,11 +17,13 @@ export interface Ride {
    * @example 5
    */
   difficulty: number;
+  duration: number;
   /**
    * Description of the ride.
    * @example "Magnifique tour du lac de Joux, avec une vue imprenable sur les montagnes environnantes."
    */
   description: string;
+
   /**
    * Location details of the ride.
    * @see RideLocation

@@ -21,6 +21,7 @@ export class ListComponent implements OnInit, OnChanges {
   @Input() searchQuery = '';
   @Input() distanceQuery = 0;
   @Input() cityQuery = '';
+  @Input() timeQuery = 0;
 
   rides: Ride[] = [];
   allRides: Ride[] = [];
@@ -35,7 +36,8 @@ export class ListComponent implements OnInit, OnChanges {
     if (
       changes['searchQuery'] ||
       changes['distanceQuery'] ||
-      changes['cityQuery']
+      changes['cityQuery'] ||
+      changes['timeQuery']
     ) {
       this.filterRides();
     }
@@ -57,13 +59,16 @@ export class ListComponent implements OnInit, OnChanges {
       const matchesDistance =
         this.distanceQuery > 0 ? ride.length <= this.distanceQuery : true;
 
+        const matchesTime =
+        this.timeQuery > 0 ? ride.duration <= this.timeQuery : true;
+
       const matchesCity = this.cityQuery
         ? ride.location.city
             .toLowerCase()
             .startsWith(this.cityQuery[0].toLowerCase())
         : true;
 
-      return matchesQuery && matchesDistance && matchesCity;
+      return matchesQuery && matchesDistance && matchesCity && matchesTime;
     });
   }
 }

@@ -1,9 +1,11 @@
 <app-header
+  (rideTimeChange)="onTimeValueReceived($event)"
   (cityValueChange)="onCityValueReceived($event)"
   (distanceValueChange)="onDistanceValueReceived($event)"
   (searchValueChange)="onSearchValueReceived($event)"
 ></app-header>
 <app-list
+  [timeQuery]="timeBarValue"
   [cityQuery]="cityBarValue"
   [distanceQuery]="distanceBarValue"
   [searchQuery]="searchBarValue"

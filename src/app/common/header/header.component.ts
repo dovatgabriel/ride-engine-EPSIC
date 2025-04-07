@@ -32,16 +32,21 @@ export class HeaderComponent implements OnInit {
   @Output() searchValueChange = new EventEmitter<string>();
   @Output() distanceValueChange = new EventEmitter<number>();
   @Output() cityValueChange = new EventEmitter<string>();
+  @Output() rideTimeChange = new EventEmitter<number>();
   searchValue = '';
   searchDistance = 0;
+  searchTime = 0;
   longestRide = 0;
   shortestRide = 0;
   searchCity = '';
+  longestRideTime = 0;
+  shortestRideTime = 0;
+
 
   cityControl = new FormControl('');
   cityList: (string | number)[][] = [];
 
-  constructor(private readonly ridesService: RidesService) {}
+  constructor(private readonly ridesService: RidesService) { }
 
   ngOnInit(): void {
     this.ridesService.getLongestRide().subscribe((value) => {
@@ -72,4 +77,8 @@ export class HeaderComponent implements OnInit {
   onCityInput() {
     this.cityValueChange.emit(this.searchCity);
   }
+  onTimeInput(){
+    this.rideTimeChange.emit(this.searchTime);
+  }
+
 }

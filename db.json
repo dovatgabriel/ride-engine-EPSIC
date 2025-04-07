@@ -4,6 +4,7 @@
       "id": 1,
       "title": "Tour du lac de Joux",
       "difficulty": 5,
+      "duration": 3,
       "description": "Magnifique tour du lac de Joux, avec une vue imprenable sur les montagnes environnantes.",
       "location": {
         "city": "Le Pont",
@@ -23,6 +24,7 @@
       "id": 2,
       "title": "Balade des vignobles de Lavaux",
       "difficulty": 4,
+      "duration": 2,
       "description": "Promenade paisible au cœur des vignobles de Lavaux, classés au patrimoine mondial de l'UNESCO.",
       "location": {
         "city": "Cully",
@@ -42,6 +44,7 @@
       "id": 3,
       "title": "Sentier du Mont-Pèlerin",
       "difficulty": 6,
+      "duration": 4,
       "description": "Montée à travers forêt et prairies avec panorama sur le lac Léman depuis le sommet.",
       "location": {
         "city": "Chardonne",
@@ -61,6 +64,7 @@
       "id": 4,
       "title": "Tour de la Venoge",
       "difficulty": 3,
+      "duration": 3,
       "description": "Balade le long de la rivière Venoge, idéale pour les familles et les amoureux de la nature.",
       "location": {
         "city": "Echandens",
@@ -80,6 +84,7 @@
       "id": 5,
       "title": "Balade des Pléiades",
       "difficulty": 7,
+      "duration": 5,
       "description": "Randonnée alpine jusqu’aux Pléiades, avec vue panoramique sur les Alpes et le lac Léman.",
       "location": {
         "city": "Blonay",
@@ -99,6 +104,7 @@
       "id": 6,
       "title": "Forêt de Sauvabelin",
       "difficulty": 2,
+      "duration": 1,
       "description": "Petite promenade en pleine forêt urbaine avec tour panoramique en bois.",
       "location": {
         "city": "Lausanne",
@@ -118,6 +124,7 @@
       "id": 7,
       "title": "Crêt de la Neuve",
       "difficulty": 6,
+      "duration": 3,
       "description": "Randonnée sur les crêtes avec vue sur le Jura et les Alpes, très apprécié des randonneurs.",
       "location": {
         "city": "Bière",
@@ -137,6 +144,7 @@
       "id": 8,
       "title": "Tour de Saint-Cergue",
       "difficulty": 5,
+      "duration": 4,
       "description": "Balade variée autour de Saint-Cergue, entre forêts, pâturages et vues sur les Alpes.",
       "location": {
         "city": "Saint-Cergue",
@@ -156,6 +164,7 @@
       "id": 9,
       "title": "Sentier des Toblerones",
       "difficulty": 4,
+      "duration": 2,
       "description": "Chemin historique suivant les fortifications anti-chars de la Seconde Guerre mondiale.",
       "location": {
         "city": "Bassins",
@@ -175,6 +184,7 @@
       "id": 10,
       "title": "Panorama sur le Moléson depuis les Préalpes vaudoises",
       "difficulty": 8,
+      "duration": 6,
       "description": "Parcours exigeant menant à un point de vue spectaculaire sur le Moléson et les montagnes environnantes.",
       "location": {
         "city": "Les Diablerets",
