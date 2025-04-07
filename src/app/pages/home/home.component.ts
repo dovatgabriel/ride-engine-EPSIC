@@ -13,13 +13,12 @@ export class HomeComponent {
   searchBarValue = '';
   distanceBarValue = 0;
   cityBarValue = '';
-  
 
   onDistanceValueReceived(distanceValue: number) {
     this.distanceBarValue = distanceValue;
   }
 
-  onCityValueReceived(cityValue: string){
+  onCityValueReceived(cityValue: string) {
     this.cityBarValue = cityValue;
   }
   onSearchValueReceived(searchValue: string) {

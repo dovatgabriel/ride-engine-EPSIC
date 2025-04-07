@@ -3,7 +3,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
@@ -39,9 +39,9 @@ export class HeaderComponent implements OnInit {
   searchCity = '';
 
   cityControl = new FormControl('');
-  cityList: any[][] = [];
+  cityList: (string | number)[][] = [];
 
-  constructor(private readonly ridesService: RidesService) { }
+  constructor(private readonly ridesService: RidesService) {}
 
   ngOnInit(): void {
     this.ridesService.getLongestRide().subscribe((value) => {
@@ -53,9 +53,11 @@ export class HeaderComponent implements OnInit {
       this.shortestRide = value;
     });
 
-
-    this.ridesService.getRides().subscribe(rides => {
-      this.cityList = rides.map(ride => [ride.location.city, ride.location.npa]);
+    this.ridesService.getRides().subscribe((rides) => {
+      this.cityList = rides.map((ride) => [
+        ride.location.city,
+        ride.location.npa,
+      ]);
     });
   }
 
