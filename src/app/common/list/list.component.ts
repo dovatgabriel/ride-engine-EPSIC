@@ -20,6 +20,7 @@ import { NgForOf } from '@angular/common';
 export class ListComponent implements OnInit, OnChanges {
   @Input() searchQuery = '';
   @Input() distanceQuery = 0;
+  @Input() cityQuery = '';
 
   rides: Ride[] = [];
   allRides: Ride[] = [];
@@ -31,7 +32,11 @@ export class ListComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['searchQuery'] || changes['distanceQuery']) {
+    if (
+      changes['searchQuery'] ||
+      changes['distanceQuery'] ||
+      changes['cityQuery']
+    ) {
       this.filterRides();
     }
   }
@@ -52,7 +57,13 @@ export class ListComponent implements OnInit, OnChanges {
       const matchesDistance =
         this.distanceQuery > 0 ? ride.length <= this.distanceQuery : true;
 
-      return matchesQuery && matchesDistance;
+      const matchesCity = this.cityQuery
+        ? ride.location.city
+            .toLowerCase()
+            .startsWith(this.cityQuery[0].toLowerCase())
+        : true;
+
+      return matchesQuery && matchesDistance && matchesCity;
     });
   }
 }

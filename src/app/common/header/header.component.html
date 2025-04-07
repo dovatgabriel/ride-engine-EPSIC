@@ -44,5 +44,19 @@
       />
     </mat-slider>
     <h4>kilomètres : {{ searchDistance }}</h4>
+
+    <h4>Chercher la ville</h4>
+    <mat-form-field>
+      <mat-label>Villes</mat-label>
+      <mat-select
+        [formControl]="cityControl"
+        [(ngModel)]="searchCity"
+        (selectionChange)="onCityInput()"
+      >
+        <mat-option *ngFor="let city of cityList" [value]="city"
+          >{{ city[0] }} {{ city[1] }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
   </div>
 </mat-menu>

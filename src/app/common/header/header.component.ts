@@ -1,38 +1,45 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
-import { MatFormField } from '@angular/material/form-field';
-import { MatInput } from '@angular/material/input';
-import { MatIconButton } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
-import { MatOption } from '@angular/material/select';
-import { MatSlider, MatSliderThumb } from '@angular/material/slider';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatIconModule } from '@angular/material/icon';
 import { RidesService } from '../../services/rides.service';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   imports: [
-    MatIcon,
-    MatInput,
-    MatIconButton,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
     FormsModule,
-    MatMenuTrigger,
-    MatMenu,
-    MatFormField,
-    MatOption,
-    MatSlider,
-    MatSliderThumb,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSliderModule,
+    ReactiveFormsModule,
+    CommonModule,
   ],
 })
 export class HeaderComponent implements OnInit {
   @Output() searchValueChange = new EventEmitter<string>();
   @Output() distanceValueChange = new EventEmitter<number>();
+  @Output() cityValueChange = new EventEmitter<string>();
   searchValue = '';
   searchDistance = 0;
   longestRide = 0;
   shortestRide = 0;
+  searchCity = '';
+
+  cityControl = new FormControl('');
+  cityList: (string | number)[][] = [];
 
   constructor(private readonly ridesService: RidesService) {}
 
@@ -45,14 +52,24 @@ export class HeaderComponent implements OnInit {
     this.ridesService.getShortestRide().subscribe((value) => {
       this.shortestRide = value;
     });
+
+    this.ridesService.getRides().subscribe((rides) => {
+      this.cityList = rides.map((ride) => [
+        ride.location.city,
+        ride.location.npa,
+      ]);
+    });
   }
 
   onDistanceInput() {
     this.distanceValueChange.emit(this.searchDistance);
-    console.log(this.searchDistance);
   }
 
   onSearchInput() {
     this.searchValueChange.emit(this.searchValue);
+  }
+
+  onCityInput() {
+    this.cityValueChange.emit(this.searchCity);
   }
 }
