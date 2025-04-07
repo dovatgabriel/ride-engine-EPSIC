@@ -1,8 +1,10 @@
 <app-header
+  (cityValueChange)="onCityValueReceived($event)"
   (distanceValueChange)="onDistanceValueReceived($event)"
   (searchValueChange)="onSearchValueReceived($event)"
 ></app-header>
 <app-list
+  [cityQuery]="cityBarValue"
   [distanceQuery]="distanceBarValue"
   [searchQuery]="searchBarValue"
 ></app-list>
