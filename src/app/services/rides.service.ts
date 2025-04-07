@@ -19,19 +19,17 @@ export class RidesService {
     return this.getRides().pipe(
       map((rides: Ride[]) => {
         if (!rides.length) return 0;
-        return Math.max(...rides.map(ride => ride.length));
-      })
+        return Math.max(...rides.map((ride) => ride.length));
+      }),
     );
   }
 
-  getShortestRide(): Observable<number>{
+  getShortestRide(): Observable<number> {
     return this.getRides().pipe(
-      map((rides: Ride[])=>{
+      map((rides: Ride[]) => {
         if (!rides.length) return 0;
-        return Math.min(...rides.map(ride => ride.length))
-      })
-    )
+        return Math.min(...rides.map((ride) => ride.length));
+      }),
+    );
   }
-  
-
 }

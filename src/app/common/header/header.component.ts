@@ -41,17 +41,16 @@ export class HeaderComponent implements OnInit {
       this.longestRide = value;
       this.searchDistance = value;
     });
-  
+
     this.ridesService.getShortestRide().subscribe((value) => {
       this.shortestRide = value;
     });
-  }  
+  }
 
   onDistanceInput() {
     this.distanceValueChange.emit(this.searchDistance);
-    console.log(this.searchDistance)
+    console.log(this.searchDistance);
   }
-
 
   onSearchInput() {
     this.searchValueChange.emit(this.searchValue);
