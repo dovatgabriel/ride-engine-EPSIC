@@ -5,7 +5,7 @@ import { RideComponent } from './common/ride/ride.component';
 export const routes: Routes = [
   {
     path: 'rides/:id',
-    component: RideComponent, 
+    component: RideComponent,
   },
   {
     path: 'home',
