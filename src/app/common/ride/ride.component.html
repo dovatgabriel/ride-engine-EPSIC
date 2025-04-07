@@ -1,4 +1,7 @@
-<div class="ride" [style]="{ 'background-image': 'url(' + ride?.banner + ')' }">
+<div class="ride"
+     [style]="{ 'background-image': 'url(' + ride?.banner + ')' }"
+     (click)="goToDetail()"
+     style="cursor: pointer;">
   <div class="ride__title">
     <h2>{{ ride?.title }}</h2>
     <span class="ride__title__length">
