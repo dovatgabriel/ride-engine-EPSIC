@@ -32,4 +32,23 @@ export class RidesService {
       }),
     );
   }
+
+  getLongestTimeRide(): Observable<number> {
+    return this.getRides().pipe(
+      map((rides: Ride[]) => {
+        if (!rides.length) return 0;
+        return Math.max(...rides.map((ride) => ride.duration));
+      })
+    );
+  }
+
+  getShortestTimeRide(): Observable<number> {
+    return this.getRides().pipe(
+      map((rides: Ride[]) => {
+        if (!rides.length) return 0;
+        return Math.min(...rides.map((ride) => ride.duration));
+      })
+    );
+  }
+  
 }

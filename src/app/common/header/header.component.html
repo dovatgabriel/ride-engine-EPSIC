@@ -31,7 +31,7 @@
     </mat-form-field>
 
   </div>
-  <mat-slider min="1" max="10" step="1" thumbLabel tickInterval="1">
+  <mat-slider min="{{ shortestRideTime }}" max="{{ longestRideTime }}" step="1" thumbLabel tickInterval="1">
     <input matSliderThumb (change)="onTimeInput()" [(ngModel)]="searchTime" />
   </mat-slider>
   <h4>Temps de balade en Heures : {{ searchTime }}</h4>

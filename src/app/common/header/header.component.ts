@@ -58,6 +58,14 @@ export class HeaderComponent implements OnInit {
       this.shortestRide = value;
     });
 
+    this.ridesService.getLongestTimeRide().subscribe((value) =>{
+      this.longestRideTime = value;
+    })
+
+    this.ridesService.getShortestTimeRide().subscribe((value) =>{
+      this.shortestRideTime = value;
+    })
+
     this.ridesService.getRides().subscribe((rides) => {
       this.cityList = rides.map((ride) => [
         ride.location.city,
