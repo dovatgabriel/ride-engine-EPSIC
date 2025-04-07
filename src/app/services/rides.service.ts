@@ -38,7 +38,7 @@ export class RidesService {
       map((rides: Ride[]) => {
         if (!rides.length) return 0;
         return Math.max(...rides.map((ride) => ride.duration));
-      })
+      }),
     );
   }
 
@@ -47,8 +47,7 @@ export class RidesService {
       map((rides: Ride[]) => {
         if (!rides.length) return 0;
         return Math.min(...rides.map((ride) => ride.duration));
-      })
+      }),
     );
   }
-  
 }

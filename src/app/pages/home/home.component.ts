@@ -26,7 +26,7 @@ export class HomeComponent {
     this.searchBarValue = searchValue;
   }
 
-  onTimeValueReceived(timeValue: number){
+  onTimeValueReceived(timeValue: number) {
     this.timeBarValue = timeValue;
   }
 }
