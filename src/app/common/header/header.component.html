@@ -36,5 +36,7 @@
     </mat-slider>
     <h4>Temps de balade en Heures : {{ searchTime }}</h4>
   </div>
-
+  <div style="display: flex; justify-content: flex-start; margin-left: 16px;">
+    <button mat-stroked-button color="warn" (click)="resetFilters()">Effacer les filtres</button>
+  </div>
 </mat-menu>

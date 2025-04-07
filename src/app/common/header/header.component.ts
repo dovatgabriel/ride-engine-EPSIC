@@ -58,12 +58,12 @@ export class HeaderComponent implements OnInit {
       this.shortestRide = value;
     });
 
-    this.ridesService.getLongestTimeRide().subscribe((value) =>{
+    this.ridesService.getLongestTimeRide().subscribe((value) => {
       this.longestRideTime = value;
       this.searchTime = value;
     })
 
-    this.ridesService.getShortestTimeRide().subscribe((value) =>{
+    this.ridesService.getShortestTimeRide().subscribe((value) => {
       this.shortestRideTime = value;
     })
 
@@ -86,8 +86,15 @@ export class HeaderComponent implements OnInit {
   onCityInput() {
     this.cityValueChange.emit(this.searchCity);
   }
-  onTimeInput(){
+  onTimeInput() {
     this.rideTimeChange.emit(this.searchTime);
   }
+
+  resetFilters(): void {
+    this.searchValue = '';
+    this.searchCity = '';
+    this.cityControl.setValue('');
+  }
+
 
 }
