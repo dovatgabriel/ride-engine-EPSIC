@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatFormField } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
 import { MatOption } from '@angular/material/select';
 import { MatSlider, MatSliderThumb } from '@angular/material/slider';
+import { RidesService } from '../../services/rides.service';
 
 @Component({
   selector: 'app-header',
@@ -25,9 +26,31 @@ import { MatSlider, MatSliderThumb } from '@angular/material/slider';
     MatSliderThumb,
   ],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @Output() searchValueChange = new EventEmitter<string>();
+  @Output() distanceValueChange = new EventEmitter<number>();
   searchValue = '';
+  searchDistance = 0;
+  longestRide = 0;
+  shortestRide = 0;
+
+  constructor(private readonly ridesService: RidesService) {}
+
+  ngOnInit(): void {
+    this.ridesService.getLongestRide().subscribe((value) => {
+      this.longestRide = value;
+      this.searchDistance = value;
+    });
+
+    this.ridesService.getShortestRide().subscribe((value) => {
+      this.shortestRide = value;
+    });
+  }
+
+  onDistanceInput() {
+    this.distanceValueChange.emit(this.searchDistance);
+    console.log(this.searchDistance);
+  }
 
   onSearchInput() {
     this.searchValueChange.emit(this.searchValue);

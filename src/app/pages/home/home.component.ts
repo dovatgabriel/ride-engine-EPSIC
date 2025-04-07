@@ -11,6 +11,11 @@ import { ListComponent } from '../../common/list/list.component';
 })
 export class HomeComponent {
   searchBarValue = '';
+  distanceBarValue = 0;
+
+  onDistanceValueReceived(distanceValue: number) {
+    this.distanceBarValue = distanceValue;
+  }
 
   onSearchValueReceived(searchValue: string) {
     this.searchBarValue = searchValue;
