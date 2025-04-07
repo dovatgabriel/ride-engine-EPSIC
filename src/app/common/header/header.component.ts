@@ -92,9 +92,17 @@ export class HeaderComponent implements OnInit {
 
   resetFilters(): void {
     this.searchValue = '';
+    this.searchDistance = this.longestRide;
+    this.searchTime = this.longestRideTime;
     this.searchCity = '';
     this.cityControl.setValue('');
+  
+    this.searchValueChange.emit(this.searchValue);
+    this.distanceValueChange.emit(this.searchDistance);
+    this.rideTimeChange.emit(this.searchTime);
+    this.cityValueChange.emit(this.searchCity);
   }
+  
 
 
 }
