@@ -8,8 +8,7 @@ import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
   selector: 'app-ride',
   standalone: true,
   imports: [
-    CommonModule,
-    DifficultyColorPipe
+    CommonModule, DifficultyColorPipe
   ],
   templateUrl: './ride.component.html',
   styleUrl: './ride.component.scss',
