@@ -60,6 +60,7 @@ export class HeaderComponent implements OnInit {
 
     this.ridesService.getLongestTimeRide().subscribe((value) =>{
       this.longestRideTime = value;
+      this.searchTime = value;
     })
 
     this.ridesService.getShortestTimeRide().subscribe((value) =>{
