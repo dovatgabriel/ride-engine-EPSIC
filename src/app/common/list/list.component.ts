@@ -59,7 +59,7 @@ export class ListComponent implements OnInit, OnChanges {
       const matchesDistance =
         this.distanceQuery > 0 ? ride.length <= this.distanceQuery : true;
 
-        const matchesTime =
+      const matchesTime =
         this.timeQuery > 0 ? ride.duration <= this.timeQuery : true;
 
       const matchesCity = this.cityQuery

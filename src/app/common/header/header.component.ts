@@ -42,11 +42,10 @@ export class HeaderComponent implements OnInit {
   longestRideTime = 0;
   shortestRideTime = 0;
 
-
   cityControl = new FormControl('');
   cityList: (string | number)[][] = [];
 
-  constructor(private readonly ridesService: RidesService) { }
+  constructor(private readonly ridesService: RidesService) {}
 
   ngOnInit(): void {
     this.ridesService.getLongestRide().subscribe((value) => {
@@ -61,11 +60,11 @@ export class HeaderComponent implements OnInit {
     this.ridesService.getLongestTimeRide().subscribe((value) => {
       this.longestRideTime = value;
       this.searchTime = value;
-    })
+    });
 
     this.ridesService.getShortestTimeRide().subscribe((value) => {
       this.shortestRideTime = value;
-    })
+    });
 
     this.ridesService.getRides().subscribe((rides) => {
       this.cityList = rides.map((ride) => [
@@ -96,13 +95,10 @@ export class HeaderComponent implements OnInit {
     this.searchTime = this.longestRideTime;
     this.searchCity = '';
     this.cityControl.setValue('');
-  
+
     this.searchValueChange.emit(this.searchValue);
     this.distanceValueChange.emit(this.searchDistance);
     this.rideTimeChange.emit(this.searchTime);
     this.cityValueChange.emit(this.searchCity);
   }
-  
-
-
 }
