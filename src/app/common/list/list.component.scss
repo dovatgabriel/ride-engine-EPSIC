@@ -5,18 +5,18 @@
   gap: 10px;
   width: 40%;
   margin: 20px auto;
-  padding: 0 0 100px 0;
+  padding: 0 0 10px 0;
 }
 
 .pagination {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 12px 15px;
   border: none;
   border-radius: 10px;
   background-color: #fff;

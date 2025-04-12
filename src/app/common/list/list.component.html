@@ -1,12 +1,10 @@
 <div class="rides-list">
-  <app-ride *ngFor="let ride of rides" [ride]="ride"></app-ride>
+  <app-ride *ngFor="let ride of paginatedRides" [ride]="ride"></app-ride>
 </div>
-
 <div class="pagination">
   <button (click)="goToPage(1)" [disabled]="currentPage === 1">
     <-
   </button>
-
 
 
   <button
