@@ -4,6 +4,8 @@ import {
   OnChanges,
   OnInit,
   SimpleChanges,
+  Output,
+  EventEmitter,
 } from '@angular/core';
 import { Ride } from '../../../types/ride';
 import { RidesService } from '../../services/rides.service';
@@ -22,9 +24,14 @@ export class ListComponent implements OnInit, OnChanges {
   @Input() distanceQuery = 0;
   @Input() cityQuery = '';
   @Input() timeQuery = 0;
+  @Input() itemsPerPage = 5;
+  @Input() currentPage = 1;
+  @Output() pageChange = new EventEmitter<number>();
 
   rides: Ride[] = [];
   allRides: Ride[] = [];
+  paginatedRides: Ride[] = [];
+  totalPages = 1;
 
   constructor(private readonly ridesService: RidesService) {}
 
@@ -70,5 +77,23 @@ export class ListComponent implements OnInit, OnChanges {
 
       return matchesQuery && matchesDistance && matchesCity && matchesTime;
     });
+    this.totalPages = Math.max(
+      1,
+      Math.ceil(this.rides.length / this.itemsPerPage),
+    );
+    this.currentPage = 1;
+    this.updatePaginatedRides();
+  }
+  updatePaginatedRides(): void {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    const end = start + this.itemsPerPage;
+    this.paginatedRides = this.rides.slice(start, end);
+  }
+  goToPage(page: number) {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.updatePaginatedRides();
+      this.pageChange.emit(page);
+    }
   }
 }
