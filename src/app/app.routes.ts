@@ -4,6 +4,11 @@ import { RideComponent } from './common/ride/ride.component';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
     path: 'rides/:id',
     component: RideComponent,
   },

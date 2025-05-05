@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; // ✅ Ajouté ici
 import { Router } from '@angular/router';
 import { Ride } from '../../../types/ride';
 import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
@@ -8,7 +8,7 @@ import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
   selector: 'app-ride',
   standalone: true,
   imports: [
-    CommonModule, DifficultyColorPipe
+    CommonModule, 
   ],
   templateUrl: './ride.component.html',
   styleUrl: './ride.component.scss',
