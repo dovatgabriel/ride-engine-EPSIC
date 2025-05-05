@@ -1,60 +1,63 @@
 <div class="ride-detail-container">
-    <div class="back-button">
-      <a routerLink="/home" mat-icon-button>
-        <mat-icon>arrow_back</mat-icon>
-      </a>
+  <div class="back-button">
+    <a routerLink="/home" mat-icon-button>
+      <mat-icon>arrow_back</mat-icon>
+    </a>
+  </div>
+
+  <div *ngIf="loading" class="loading">Chargement en cours...</div>
+
+  <div *ngIf="error" class="error">
+    Impossible de charger les détails de cette balade.
+    <a routerLink="/home" mat-button color="primary">Retour à l'accueil</a>
+  </div>
+
+  <div *ngIf="!loading && !error && ride" class="ride-content">
+    <div class="banner" [style.background-image]="backgroundImage">
+      <h1 class="ride-title">{{ ride.title }}</h1>
     </div>
-  
-    <div *ngIf="loading" class="loading">
-      Chargement en cours...
-    </div>
-  
-    <div *ngIf="error" class="error">
-      Impossible de charger les détails de cette balade.
-      <a routerLink="/home" mat-button color="primary">Retour à l'accueil</a>
-    </div>
-  
-    <div *ngIf="!loading && !error && ride" class="ride-content">
-      <div class="banner" [style.background-image]="backgroundImage">
-        <h1 class="ride-title">{{ ride.title }}</h1>
-      </div>
-  
-      <div class="ride-info">
-        <div class="info-card">
-          <h2>Détails de la balade</h2>
-          <div class="info-grid">
-            <div class="info-item">
-              <span class="label">Distance:</span>
-              <span class="value">{{ ride.length }} km</span>
-            </div>
-            <div class="info-item">
-              <span class="label">Difficulté:</span>
-              <span class="value">{{ ride.difficulty }}/10</span>
-            </div>
-            <div class="info-item">
-              <span class="label">Localité:</span>
-              <span class="value">{{ ride.location.city }} ({{ ride.location.npa }})</span>
-            </div>
-            <div class="info-item">
-              <span class="label">Adresse de départ:</span>
-              <span class="value">{{ ride.location.addressName }} {{ ride.location.addressNumber }}</span>
-            </div>
+
+    <div class="ride-info">
+      <div class="info-card">
+        <h2>Détails de la balade</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Distance:</span>
+            <span class="value">{{ ride.length }} km</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Difficulté:</span>
+            <span class="value">{{ ride.difficulty }}/10</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Localité:</span>
+            <span class="value"
+              >{{ ride.location.city }} ({{ ride.location.npa }})</span
+            >
+          </div>
+          <div class="info-item">
+            <span class="label">Adresse de départ:</span>
+            <span class="value"
+              >{{ ride.location.addressName }}
+              {{ ride.location.addressNumber }}</span
+            >
           </div>
         </div>
-  
-        <div class="description">
-          <h2>Description</h2>
-          <p>{{ ride.description }}</p>
-        </div>
-  
-        <div *ngIf="ride.images && ride.images.length > 0" class="images">
-          <h2>Photos</h2>
-          <div class="image-gallery">
-            <div *ngFor="let image of ride.images" class="image-container">
-              <img [src]="image" [alt]="ride.title" class="gallery-image">
-            </div>
+      </div>
+
+      <div class="description">
+        <h2>Description</h2>
+        <p>{{ ride.description }}</p>
+      </div>
+
+      <div *ngIf="ride.images && ride.images.length > 0" class="images">
+        <h2>Photos</h2>
+        <div class="image-gallery">
+          <div *ngFor="let image of ride.images" class="image-container">
+            <img [src]="image" [alt]="ride.title" class="gallery-image" />
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

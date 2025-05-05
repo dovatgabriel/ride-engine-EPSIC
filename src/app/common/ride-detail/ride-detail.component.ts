@@ -9,14 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-ride-detail',
   standalone: true,
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatIconModule,
-    RouterLink
-  ],
+  imports: [CommonModule, MatButtonModule, MatIconModule, RouterLink],
   templateUrl: './ride-detail.component.html',
-  styleUrl: './ride-detail.component.scss'
+  styleUrl: './ride-detail.component.scss',
 })
 export class RideDetailComponent implements OnInit {
   ride: Ride | undefined;
@@ -25,7 +20,7 @@ export class RideDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private ridesService: RidesService
+    private ridesService: RidesService,
   ) {}
 
   ngOnInit(): void {
@@ -41,10 +36,13 @@ export class RideDetailComponent implements OnInit {
           this.loading = false;
         },
         error: (err) => {
-          console.error('Erreur lors du chargement des détails de la balade:', err);
+          console.error(
+            'Erreur lors du chargement des détails de la balade:',
+            err,
+          );
           this.error = true;
           this.loading = false;
-        }
+        },
       });
     } else {
       this.error = true;
