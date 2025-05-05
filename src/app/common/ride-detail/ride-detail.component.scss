@@ -1,0 +1,115 @@
+.ride-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .back-button {
+    margin-bottom: 16px;
+  }
+  
+  .loading, .error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .banner {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .ride-title {
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 16px;
+    margin: 0;
+    width: 100%;
+    font-size: 2rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .ride-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .info-card, .description, .images {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  
+  .value {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 180px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .banner {
+      height: 200px;
+    }
+    
+    .ride-title {
+      font-size: 1.5rem;
+    }
+    
+    .image-gallery {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }

@@ -4,7 +4,6 @@ import { MatInput } from '@angular/material/input';
 import { MatIconButton } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
-import { MatOption } from '@angular/material/select';
 import { MatSlider, MatSliderThumb } from '@angular/material/slider';
 import { RidesService } from '../../services/rides.service';
 
@@ -19,7 +18,6 @@ import { RidesService } from '../../services/rides.service';
     FormsModule,
     MatMenuTrigger,
     MatMenu,
-    MatOption,
     MatSlider,
     MatSliderThumb,
   ],
