@@ -10,6 +10,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
+import { MatSlider, MatSliderThumb } from '@angular/material/slider';
 import { RidesService } from '../../services/rides.service';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -31,7 +33,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     MatMenuTrigger,
     MatMenu,
-    MatOption,
     MatSlider,
     MatSliderThumb,
   ],

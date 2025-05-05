@@ -15,6 +15,10 @@ export class RidesService {
     return this.http.get<Ride[]>(`${this.jsonServerUrl}/rides`).pipe();
   }
 
+  getRideById(id: number): Observable<Ride> {
+    return this.http.get<Ride>(`${this.jsonServerUrl}/rides/${id}`).pipe();
+  }
+
   getLongestRide(): Observable<number> {
     return this.getRides().pipe(
       map((rides: Ride[]) => {
@@ -32,6 +36,7 @@ export class RidesService {
       }),
     );
   }
+<<<<<<< HEAD
 
   getLongestTimeRide(): Observable<number> {
     return this.getRides().pipe(
@@ -51,3 +56,6 @@ export class RidesService {
     );
   }
 }
+=======
+}
+>>>>>>> 8ba4807 (feat: detail page)
