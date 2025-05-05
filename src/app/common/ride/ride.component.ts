@@ -6,9 +6,7 @@ import { Ride } from '../../../types/ride';
 @Component({
   selector: 'app-ride',
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule],
   templateUrl: './ride.component.html',
   styleUrl: './ride.component.scss',
 })
