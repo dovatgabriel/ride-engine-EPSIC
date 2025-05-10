@@ -35,3 +35,8 @@ button {
     cursor: not-allowed;
   }
 }
+@media (max-width: 1100px) {
+  .rides-list {
+    width: 90%;
+  }
+}
