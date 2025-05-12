@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common'; // ✅ Ajouté ici
+import { CommonModule } from '@angular/common'; 
 import { Router } from '@angular/router';
 import { Ride } from '../../../types/ride';
 
