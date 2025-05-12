@@ -11,11 +11,12 @@ import { Ride } from '../../../types/ride';
 import { RidesService } from '../../services/rides.service';
 import { RideComponent } from '../ride/ride.component';
 import { NgForOf } from '@angular/common';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [RideComponent, NgForOf],
+  imports: [RideComponent, NgForOf, MatIcon],
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })
@@ -95,5 +96,9 @@ export class ListComponent implements OnInit, OnChanges {
       this.updatePaginatedRides();
       this.pageChange.emit(page);
     }
+  }
+  goToLastPage(): void {
+    this.currentPage = this.totalPages;
+    this.updatePaginatedRides();
   }
 }
