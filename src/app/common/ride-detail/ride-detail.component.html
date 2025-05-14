@@ -13,7 +13,7 @@
   </div>
 
   <div *ngIf="!loading && !error && ride" class="ride-content">
-    <div class="banner" [style.background-image]=" backgroundImage">
+    <div class="banner" [style.background-image]="backgroundImage">
       <h1 class="ride-title">{{ ride.title }}</h1>
     </div>
 
@@ -27,7 +27,10 @@
           </div>
           <div class="info-item">
             <span class="label">Difficulté:</span>
-            <span class="value" [ngStyle]="{ color: ride.difficulty | difficultyColor }">
+            <span
+              class="value"
+              [ngStyle]="{ color: ride.difficulty | difficultyColor }"
+            >
               {{ ride.difficulty }}/10
             </span>
           </div>
@@ -52,12 +55,35 @@
         <p>{{ ride.description }}</p>
       </div>
 
-      <div *ngIf="ride.images && ride.images.length > 0" class="images">
+      <div *ngIf="ride.images && ride.images.length > 0" class="carousel">
         <h2>Photos</h2>
-        <div class="image-gallery">
-          <div *ngFor="let image of ride.images" class="image-container">
-            <img [src]="image" [alt]="ride.title" class="gallery-image" />
-          </div>
+
+        <div class="carousel-container">
+          <button
+            class="nav prev"
+            (click)="previousImage()"
+            aria-label="Précédente"
+          >
+            ❮
+          </button>
+
+          <img
+            [src]="ride.images[currentImageIndex]"
+            [alt]="ride.title"
+            class="carousel-image"
+          />
+
+          <button class="nav next" (click)="nextImage()" aria-label="Suivante">
+            ❯
+          </button>
+        </div>
+
+        <div class="carousel-dots">
+          <span
+            *ngFor="let image of ride.images; let i = index"
+            [class.active]="i === currentImageIndex"
+            (click)="goToImage(i)"
+          ></span>
         </div>
       </div>
     </div>

@@ -10,7 +10,13 @@ import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
 @Component({
   selector: 'app-ride-detail',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, RouterLink, DifficultyColorPipe],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    RouterLink,
+    DifficultyColorPipe,
+  ],
   templateUrl: './ride-detail.component.html',
   styleUrl: './ride-detail.component.scss',
 })
@@ -18,6 +24,7 @@ export class RideDetailComponent implements OnInit {
   ride: Ride | undefined;
   loading = true;
   error = false;
+  currentImageIndex = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -53,5 +60,30 @@ export class RideDetailComponent implements OnInit {
 
   get backgroundImage(): string {
     return this.ride?.banner ? `url(${this.ride.banner})` : 'none';
+  }
+  goToImage(index: number): void {
+    this.currentImageIndex = index;
+  }
+
+  nextImage(): void {
+    if (this.ride?.images && this.ride.images.length > 0) {
+      this.currentImageIndex =
+        (this.currentImageIndex + 1) % this.ride.images.length;
+    }
+  }
+
+  previousImage(): void {
+    if (this.ride?.images && this.ride.images.length > 0) {
+      this.currentImageIndex =
+        (this.currentImageIndex - 1 + this.ride.images.length) %
+        this.ride.images.length;
+    }
+  }
+
+  get currentImage(): string | undefined {
+    if (this.ride?.images && this.ride.images.length > 0) {
+      return this.ride.images[this.currentImageIndex];
+    }
+    return undefined;
   }
 }
