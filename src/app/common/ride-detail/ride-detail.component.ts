@@ -5,11 +5,12 @@ import { Ride } from '../../../types/ride';
 import { RidesService } from '../../services/rides.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
 
 @Component({
   selector: 'app-ride-detail',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, RouterLink],
+  imports: [CommonModule, MatButtonModule, MatIconModule, RouterLink, DifficultyColorPipe],
   templateUrl: './ride-detail.component.html',
   styleUrl: './ride-detail.component.scss',
 })

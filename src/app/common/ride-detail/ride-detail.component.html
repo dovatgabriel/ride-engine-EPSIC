@@ -27,7 +27,9 @@
           </div>
           <div class="info-item">
             <span class="label">Difficulté:</span>
-            <span class="value">{{ ride.difficulty }}/10</span>
+            <span class="value" [ngStyle]="{ color: ride.difficulty | difficultyColor }">
+              {{ ride.difficulty }}/10
+            </span>
           </div>
           <div class="info-item">
             <span class="label">Localité:</span>
