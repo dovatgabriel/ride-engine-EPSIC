@@ -2,7 +2,7 @@
   <app-ride *ngFor="let ride of paginatedRides" [ride]="ride"></app-ride>
 </div>
 <div class="pagination">
-  <button (click)="goToPage(1)" [disabled]="currentPage === 1"><-</button>
+  <button (click)="goToPage(1)" [disabled]="currentPage === 1"><mat-icon>keyboard_double_arrow_left</mat-icon></button>
 
   <button
     *ngFor="let page of [].constructor(totalPages); let i = index"
@@ -13,9 +13,9 @@
   </button>
 
   <button
-    (click)="goToPage(currentPage + 1)"
+    (click)="goToLastPage()"
     [disabled]="currentPage === totalPages"
   >
-    ->
+    <mat-icon>keyboard_double_arrow_right</mat-icon>
   </button>
 </div>
