@@ -15,6 +15,10 @@ export class RidesService {
     return this.http.get<Ride[]>(`${this.jsonServerUrl}/rides`).pipe();
   }
 
+  getRideById(id: number): Observable<Ride> {
+    return this.http.get<Ride>(`${this.jsonServerUrl}/rides/${id}`).pipe();
+  }
+
   getLongestRide(): Observable<number> {
     return this.getRides().pipe(
       map((rides: Ride[]) => {
