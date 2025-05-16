@@ -79,11 +79,12 @@
         </div>
 
         <div class="carousel-dots">
-          <span
-            *ngFor="let image of ride.images; let i = index"
+          <input
+            *ngFor="let _ of ride.images; let i = index"
             [class.active]="i === currentImageIndex"
             (click)="goToImage(i)"
-          ></span>
+            type="button"
+          />
         </div>
       </div>
     </div>

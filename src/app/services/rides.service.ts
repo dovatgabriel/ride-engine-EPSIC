@@ -36,8 +36,6 @@ export class RidesService {
       }),
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   getLongestTimeRide(): Observable<number> {
     return this.getRides().pipe(
@@ -57,9 +55,3 @@ export class RidesService {
     );
   }
 }
-=======
-}
->>>>>>> 8ba4807 (feat: detail page)
-=======
-}
->>>>>>> 6bd8a71 (fix: format)
