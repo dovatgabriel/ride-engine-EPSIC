@@ -43,12 +43,13 @@ export interface Ride {
    */
   length: number;
   /**
-   * The ride's path
+   * A fact about the ride.
    */
-  path: {
-    lat: number;
-    lng: number;
-  }[];
+  fact: string;
+  /**
+   * A myth about to the ride.
+   */
+  myth: string;
 }
 
 export interface RideLocation {
