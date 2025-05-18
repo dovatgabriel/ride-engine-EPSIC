@@ -42,6 +42,14 @@ export interface Ride {
    * The length of the ride in kilometers.
    */
   length: number;
+  /**
+   * A fact about the ride.
+   */
+  fact: string;
+  /**
+   * A myth about to the ride.
+   */
+  myth: string;
 }
 
 export interface RideLocation {

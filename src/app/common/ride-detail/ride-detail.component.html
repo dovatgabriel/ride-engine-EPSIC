@@ -57,6 +57,24 @@
             <p>{{ ride.description }}</p>
           </div>
 
+          <div class="fact">
+            <div class="badge">
+              Information vérifiée
+              <mat-icon>check_circle</mat-icon>
+            </div>
+            <h2>Fait intéressant</h2>
+            <p>{{ ride.fact }}</p>
+          </div>
+
+          <div class="myth">
+            <div class="badge">
+              Mythe ou légende
+              <mat-icon>error</mat-icon>
+            </div>
+            <h2>Un mythe qu'on raconte sur cette balade...</h2>
+            <p>{{ ride.myth }}</p>
+          </div>
+
           <div *ngIf="ride.images && ride.images.length > 0" class="carousel">
             <h2>Photos</h2>
 
