@@ -42,6 +42,13 @@ export interface Ride {
    * The length of the ride in kilometers.
    */
   length: number;
+  /**
+   * The ride's path
+   */
+  path: {
+    lat: number;
+    lng: number;
+  }[];
 }
 
 export interface RideLocation {

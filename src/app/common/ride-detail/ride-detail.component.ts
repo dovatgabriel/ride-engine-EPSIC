@@ -6,6 +6,8 @@ import { RidesService } from '../../services/rides.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
+import { MatTab, MatTabGroup } from '@angular/material/tabs';
+import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-ride-detail',
@@ -16,6 +18,9 @@ import { DifficultyColorPipe } from '../../pipes/difficulty-color.pipe';
     MatIconModule,
     RouterLink,
     DifficultyColorPipe,
+    MatTabGroup,
+    MatTab,
+    MapComponent,
   ],
   templateUrl: './ride-detail.component.html',
   styleUrl: './ride-detail.component.scss',
