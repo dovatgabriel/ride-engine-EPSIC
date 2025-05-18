@@ -17,76 +17,89 @@
       <h1 class="ride-title">{{ ride.title }}</h1>
     </div>
 
-    <div class="ride-info">
-      <div class="info-card">
-        <h2>Détails de la balade</h2>
-        <div class="info-grid">
-          <div class="info-item">
-            <span class="label">Distance:</span>
-            <span class="value">{{ ride.length }} km</span>
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab label="Informations">
+        <div class="ride-info">
+          <div class="info-card">
+            <h2>Détails de la balade</h2>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">Distance:</span>
+                <span class="value">{{ ride.length }} km</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Difficulté:</span>
+                <span
+                  class="value"
+                  [ngStyle]="{ color: ride.difficulty | difficultyColor }"
+                >
+                  {{ ride.difficulty }}/10
+                </span>
+              </div>
+              <div class="info-item">
+                <span class="label">Localité:</span>
+                <span class="value"
+                  >{{ ride.location.city }} ({{ ride.location.npa }})</span
+                >
+              </div>
+              <div class="info-item">
+                <span class="label">Adresse de départ:</span>
+                <span class="value"
+                  >{{ ride.location.addressName }}
+                  {{ ride.location.addressNumber }}</span
+                >
+              </div>
+            </div>
           </div>
-          <div class="info-item">
-            <span class="label">Difficulté:</span>
-            <span
-              class="value"
-              [ngStyle]="{ color: ride.difficulty | difficultyColor }"
-            >
-              {{ ride.difficulty }}/10
-            </span>
+
+          <div class="description">
+            <h2>Description</h2>
+            <p>{{ ride.description }}</p>
           </div>
-          <div class="info-item">
-            <span class="label">Localité:</span>
-            <span class="value"
-              >{{ ride.location.city }} ({{ ride.location.npa }})</span
-            >
-          </div>
-          <div class="info-item">
-            <span class="label">Adresse de départ:</span>
-            <span class="value"
-              >{{ ride.location.addressName }}
-              {{ ride.location.addressNumber }}</span
-            >
+
+          <div *ngIf="ride.images && ride.images.length > 0" class="carousel">
+            <h2>Photos</h2>
+
+            <div class="carousel-container">
+              <button
+                class="nav prev"
+                (click)="previousImage()"
+                aria-label="Précédente"
+              >
+                ❮
+              </button>
+
+              <img
+                [src]="ride.images[currentImageIndex]"
+                [alt]="ride.title"
+                class="carousel-image"
+              />
+
+              <button
+                class="nav next"
+                (click)="nextImage()"
+                aria-label="Suivante"
+              >
+                ❯
+              </button>
+            </div>
+
+            <div class="carousel-dots">
+              <input
+                *ngFor="let _ of ride.images; let i = index"
+                [class.active]="i === currentImageIndex"
+                (click)="goToImage(i)"
+                type="button"
+              />
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="description">
-        <h2>Description</h2>
-        <p>{{ ride.description }}</p>
-      </div>
-
-      <div *ngIf="ride.images && ride.images.length > 0" class="carousel">
-        <h2>Photos</h2>
-
-        <div class="carousel-container">
-          <button
-            class="nav prev"
-            (click)="previousImage()"
-            aria-label="Précédente"
-          >
-            ❮
-          </button>
-
-          <img
-            [src]="ride.images[currentImageIndex]"
-            [alt]="ride.title"
-            class="carousel-image"
-          />
-
-          <button class="nav next" (click)="nextImage()" aria-label="Suivante">
-            ❯
-          </button>
-        </div>
-
-        <div class="carousel-dots">
-          <input
-            *ngFor="let _ of ride.images; let i = index"
-            [class.active]="i === currentImageIndex"
-            (click)="goToImage(i)"
-            type="button"
-          />
-        </div>
-      </div>
-    </div>
+      </mat-tab>
+      <mat-tab label="Carte">
+        <ng-container style="padding: 20px 0 0 0">
+          <app-map />
+        </ng-container>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>

@@ -1,7 +1,7 @@
 .ride-detail-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px 100px 20px;
 }
 
 .back-button {
@@ -44,6 +44,7 @@
 .ride-info {
   display: flex;
   flex-direction: column;
+  margin: 40px 0 0 0;
   gap: 24px;
 }
 
@@ -118,7 +119,6 @@
 
 .carousel {
   margin-top: 2rem;
-  text-align: center;
 
   .carousel-container {
     position: relative;
@@ -163,7 +163,8 @@
   }
 
   .carousel-dots {
-    margin-top: 0.5rem;
+    margin: 20px auto 0 auto;
+    width: max-content;
 
     input {
       display: inline-block;

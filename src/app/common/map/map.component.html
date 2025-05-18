@@ -1,0 +1,19 @@
+<google-map
+  #map
+  [options]="options"
+  height="600px"
+  width="100%"
+  style="margin: 20px 0 0 0"
+>
+  <ng-container *ngIf="path.length">
+    <map-polyline
+      [path]="path"
+      [options]="{
+        strokeColor: '#388e3c',
+        strokeWeight: 4,
+        strokeOpacity: 1,
+      }"
+    >
+    </map-polyline>
+  </ng-container>
+</google-map>
